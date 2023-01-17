@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using Cretu_Alexandru_Lab7.Models;
+using SQLiteNetExtensions.Attributes;
 
 namespace Cretu_Alexandru_Lab7.Models
 {
@@ -15,6 +17,9 @@ namespace Cretu_Alexandru_Lab7.Models
 
         public string Description { get; set; }
         public DateTime Date { get; set; }
+
+        [ForeignKey(typeof(Shop))]
+        public int ShopID { get; set; }
     }
 
 }
